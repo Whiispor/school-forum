@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="login.css">
 </head>
@@ -13,7 +13,7 @@
         <input type="text" placeholder="Search...">
         <a href="/login" class="active">Login</a>
     </div>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
     <div id="id01" class="modal">
         <form class="modal-content animate" action="/home.html" method="post">
             <div class="imgcontainer">
@@ -25,15 +25,12 @@
                 <input type="text" placeholder="Enter Username" name="uname" required>
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember">Remember me
-                </label>
+                <label for="conf-psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="conf-psw" required>
             </div>
             <div class="container" style="background-color:#f1f1f1">
-                <button type="submit">Login</button>
+                <button type="submit">Sign Up</button>
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-                <span><a href="/signup.html">Sign Up</a></span>
             </div>
         </form>
     </div> 
@@ -46,3 +43,5 @@
         }
     </script>
 </body>
+</body>
+
