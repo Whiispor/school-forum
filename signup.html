@@ -2,7 +2,7 @@
 <head>
     <title>Sign Up</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
     <div class="menu">
@@ -13,35 +13,33 @@
         <input type="text" placeholder="Search...">
         <a href="/login" class="active">Login</a>
     </div>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-    <div id="id01" class="modal">
-        <form class="modal-content animate" action="/home.html" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="avatar.png" alt="Avatar" class="avatar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Sign Up</h2>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirm_password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                    </div>
+                    <p>Already have an account? <a href="login.html">Login here</a>.</p>
+                </form>
             </div>
-            <div class="container">
-                <label for="uname"><b>email</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-                <label for="conf-psw"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Confirm Password" name="conf-psw" required>
-            </div>
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="submit">Sign Up</button>
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            </div>
-        </form>
-    </div> 
-    <script>
-        var modal = document.getElementById('id01');
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+        </div>
+    </div>
 </body>
-</body>
-
