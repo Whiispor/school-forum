@@ -1,17 +1,10 @@
-const {people} = require("./data");
+const { Datastore } = require("./racco.js");
 
-exports.signup = (username, password) => {
-    people.data.set(username, {password});
-}
+const users = new Datastore("users", () => ({}));
 
-exports.checkPassword = (username, password) => {
-    return people.data.get(username).password === password;
-}
-
-function reg(username, password) {
-    const user = {
-        email = username,
-        psw = password,
-    }
-    console.log(user)
+function signup(name, email, password, confirm_password) {
+  if (password !== confirm_password) {
+    throw new Error("");
+  }
+  users.data[email] = { name: name, email: email, password: password };
 }
